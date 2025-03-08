@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="{{CurrentLang.IsoLang}}" culture="{{CurrentLang.CultureLang}}">
+<head>
+    <title>{{CurrentGroupePrestation.TitreGroupe}} - {{CustomTitle}} - {{City}} - {{Country}}</title>
+    <meta name="description" content="{{CustomTitle}} - {{CurrentGroupePrestation.TitreGroupe}}">
+    {{>CommonMetaTags}}
+    <link rel="canonical" href="{{UrlOffers}}" />
+    <meta property="og:url" content="{{UrlOffers}}" />
+    <meta property="og:title" content="{{CurrentGroupePrestation.TitreGroupe}}" />
+    <meta property="og:image" content="{{#Photos.0}}{{UrlMedias}}/crop-300x200/{{IdMedia}}/{{FileNamePhoto}}{{/Photos.0}}" />
+    <meta property="og:description" content="{{CustomTitle}} - {{CurrentGroupePrestation.TitreGroupe}}" />
+    {{>FaviconTags}}
+    {{>CommonStylesheets}}
+</head>
+
+<body>
+    {{{ScriptAnalytics}}}
+    {{{GoogleTagManagerBody}}}
+    {{>Header}}
+
+    <main>
+        <!-- SECTION BANNER -->
+        <section class="section-title-BG bg-img" style="background-image: url({{#CurrentGroupePrestation.PhotoGroupe}}{{UrlMedias}}/crop-1600x400/{{IdMedia}}/{{FileNamePhoto}}{{/CurrentGroupePrestation.PhotoGroupe}}{{^CurrentGroupePrestation.PhotoGroupe}}{{#Photos.0}}{{UrlMedias}}/crop-1600x400/{{IdMedia}}/{{FileNamePhoto}}{{/Photos.0}}{{/CurrentGroupePrestation.PhotoGroupe}}); " alt="{{NamePhoto}}-group-bg">
+            <div class="opacity-3">
+
+                <div class="big-title-contain content-section">
+                    <h1 class="big-title">{{CurrentGroupePrestation.TitreGroupe}}</h1>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION GROUPE -->
+        <section class="section">
+            <div class="content-section">
+
+                <div class="prestas-big-contain-in-offers">
+                    {{#CurrentGroupePrestation.PrestasGroupe}}
+                    <div class="presta-contain">
+                        <img class="bg-img" src="{{#PhotosPresta.0}}{{UrlMedias}}/crop-1230x1230/{{IdMedia}}/{{FileNamePhoto}}{{/PhotosPresta.0}}" alt="{{NamePhoto}}-presta">
+
+                        <div class="infos-contain">
+                            <div class="title-and-price-presta">
+                                <h3>{{TitrePresta}}</h3>
+
+                                {{#MinPricePresta}}
+                                <div class="saw-prices">
+                                    <span class="price-begin">{{ResourcesTemplate.PriceFrom}}</span>
+                                    <span class="presta-price">
+                                        <span class="price-price"><strong>{{MinPricePresta}}{{CurrencySymbol}}{{^isActivity}} /{{ResourcesTemplate.Night}}{{/isActivity}}</strong></span>
+                                    </span>
+                                </div>
+                                {{/MinPricePresta}}
+                            </div>
+
+                            <div class="infos-more-in-offers">
+                                {{^isActivity}}
+                                <div class="bloc-infos">
+                                    {{#CheckinTime}}
+                                    <div class="m-b-10">
+                                        <i class="las la-clock i-left"></i>{{ResourcesTemplate.CheckinTime}} : {{CheckinTimeString}}
+                                    </div>
+                                    {{/CheckinTime}}
+
+                                    {{#CheckoutTime}}
+                                    <div class="m-b-10">
+                                        <i class="las la-clock i-left"></i>{{ResourcesTemplate.CheckoutTime}} : {{CheckoutTimeString}}
+                                    </div>
+                                    {{/CheckoutTime}}
+
+                                    {{#MaxCapacityPresta}}
+                                    <div class="m-b-10">
+                                        <i class="las la-user-friends i-left"></i>{{MaxCapacityPresta}} {{ResourcesTemplate.CapacityPersons}}
+                                    </div>
+                                    {{/MaxCapacityPresta}}
+                                </div>
+                                {{/isActivity}}
+
+                                {{^IsRestaurant}}
+                                {{#isActivity}}
+                                <div class="bloc-infos">
+                                    {{#DurationPresta}}
+                                    <div class="m-b-10">
+                                        <i class="las la-clock"></i>{{DurationPresta}} {{DurationUnitPresta}}
+                                    </div>
+                                    {{/DurationPresta}}
+
+                                    {{#AgeMinimum}}
+                                    <div class="m-b-10">
+                                        <i class="las la-birthday-cake"></i>{{ResourcesTemplate.AgeStartingFrom}} {{AgeMinimum}}{{#AgeMaximum}} - {{AgeMaximum}}{{/AgeMaximum}}
+                                        {{ResourcesTemplate.AgeYears}}
+                                    </div>
+                                    {{/AgeMinimum}}
+
+                                    {{#IsAdultRequired}}
+                                    <div class="m-b-10">
+                                        <i class="las la-user-check"></i>{{ResourcesTemplate.AdultAccompaniment}} {{{ResourcesTemplate.Required}}}
+                                    </div>
+                                    {{/IsAdultRequired}}
+                                </div>
+                                {{/isActivity}}
+                                {{/IsRestaurant}}
+                            </div>
+
+                            <a href="{{UrlPrestaTemplate}}" itemprop="url" class="btn-contain">
+                                <span class="btn">{{ResourcesTemplate.discover}}</span>
+                            </a>
+                        </div>
+                    </div>
+                    {{/CurrentGroupePrestation.PrestasGroupe}}
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    {{>Footer}}
+    {{>CommonScripts}}
+    
+</body>
+
+</html>

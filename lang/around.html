@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="{{CurrentLang.IsoLang}}" culture="{{CurrentLang.CultureLang}}">
+<head>
+    <title>{{ResourcesTemplate.Around}} - {{CustomTitle}} - {{City}} - {{Country}}</title>
+    <meta name="description" content="{{SubtitleAround}}">
+    {{>CommonMetaTags}}
+    <link rel="canonical" href="{{UrlAround}}" />
+    <meta property="og:url" content="{{UrlAround}}" />
+    <meta property="og:title" content="{{ResourcesTemplate.Around}}" />
+    <meta property="og:image" content="{{#Photos.0}}{{UrlMedias}}/crop-300x200/{{IdMedia}}/{{FileNamePhoto}}{{/Photos.0}}" />
+    <meta property="og:description" content="{{SubtitleAround}}" />
+    {{>FaviconTags}}
+    {{>CommonStylesheets}}
+</head>
+<body>
+    {{{ScriptAnalytics}}}
+    {{{GoogleTagManagerBody}}}
+    {{>Header}}
+
+    <main>
+        <!-- SECTION BANNER -->
+        <section class="section-title-BG bg-img" style="background-image: url(https://static.elloha.com/webgen/img/around.jpg)" alt="{{NamePhoto}}-around-bg">
+            <div class="opacity-3">
+
+                <div class="big-title-contain content-section">
+                    <h1 class="big-title">{{ResourcesTemplate.pageMenuTitle_around}}</h1>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION AROUND -->
+        <section class="section">
+            <div class="content-section around-items-w">
+
+                {{#OisAssocied}}
+                <div class="grid-item around-contain" data-id-type="{{IdTypeOiAssocied}}" data-type-label="{{TypeOiAssocied}}" data-lat="{{XOiAssocied}}" data-lng="{{YOiAssocied}}">
+                    <div class="bg-img" style="background-image: url({{#PhotoOiAssocied}}{{UrlMedias}}/crop-1200x900/{{IdMedia}}/{{FileNamePhoto}}{{/PhotoOiAssocied}});" alt="{{NamePhoto}}">
+                        <div class="around-type">{{TypeOiAssocied}}</div>
+                    </div>
+
+                    <div class="infos-around">
+                        {{#DistanceOiAssocied}}
+                        <div class="around-distance">
+                            <i class="las la-map-marker"></i>{{ResourcesTemplate.At}} {{DistanceOiAssocied}} {{ResourcesTemplate.Km}} {{ResourcesTemplate.FromOurPlace}}
+                        </div>
+                        {{/DistanceOiAssocied}}
+
+                        <h3 data-name>{{TitleOiAssocied}}</h3>
+
+                        <div class="around-item-content-w">
+                            <div class="text-description">{{DescriptionOiAssocied}}</div>
+
+                            <div class="link-to-see see-all"><i class="las la-plus-circle"></i>{{ResourcesTemplate.ReadMore}}</div>
+                            <div class="link-to-see see-menos hidden"><i class="las la-minus-circle"></i>{{ResourcesTemplate.ShowLess}}</div>
+                        </div>
+                    </div>
+
+                    <div class="comment-item-w-contain">
+                        <div class="comment-item-w {{^TextOpinion}}no-text-opinion{{/TextOpinion}}">
+                            <div class="comment-item-w-top">
+                                <div class="comment-title">{{ResourcesTemplate.WhyWeRecommand}}</div>
+                            </div>
+                            <div class="icon-to-see icon-all"><i class="las la-plus-circle"></i></div>
+                            <div class="icon-to-see icon-menos hidden"><i class="las la-minus-circle"></i></div>
+                            <div class="text-opinion d-none">{{TextOpinion}}</div>
+                        </div>
+                    </div>
+                </div>
+                {{/OisAssocied}}
+
+                <!-- SECTION MAP -->
+                <div class="section-map section-map-in-around">
+                    <div id="applemapkit" class="fullwidth-mapkit" data-lat="{{X}}" data-lng="{{Y}}" data-string="{{CustomTitle}}, {{AddressLine}}, {{PostalCode}}, {{City}}, {{Country}}.">
+                        <div id="mapApple"></div>
+                    </div>
+
+                    <div data-action="external-map" class="external-map btn-map"><i class="las la-map-marked-alt"></i></div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="section-footer">
+        <div class="content-footer">
+
+            <div class="content-section-footer">
+                <div class="newsletter-maps-address">
+                    <!-- SECTION NEWSLETTER -->
+                    {{#HasNewsletterActivated}}
+                    <div class="section-newsletter">
+                        <h3>{{ResourcesTemplate.SubscribeToTheNewsletter}}</h3>
+
+                        <form id="Nl-form-footer" action="" method="GET" class="form-inline form-newsletter">
+                            <input id="Nl-footer-email" name="Nl-footer-email" type="email" placeholder="{{ResourcesTemplate.YourEmailAddress}}" class="form-control" data-error="{{ResourcesTemplate.EmailError}}" required>
+
+                            <button id="Nl-footer-submit" class="pull-right" type="button">{{ResourcesTemplate.Ok}}</button>
+
+                            <div class="hp">
+                                <label>Si vous �tes un humain, laissez ce champ vide</label>
+                                <input type="text" name="comment" id="Hp-footer">
+                            </div>
+                            <p id="Nl-footer-result" class="form-result hidden"></p>
+                            <div id="blockCaptcha" class="d-none hcaptcha"> </div>
+                        </form>
+                    </div>
+                    {{/HasNewsletterActivated}}
+
+                    <div class="map-and-address-footer">
+                        <!-- SECTION MAP -->
+                        <div class="address-footer-contain">
+                            <div class="address-footer">
+                                <span class="address-line-footer">{{AddressLine}},</span>
+                                <span>{{PostalCode}}, {{City}}, {{Country}}</span>
+                                {{#HasPhoneNumberActivated}}
+                                <span>{{PhoneNumber}}</span>
+                                {{/HasPhoneNumberActivated}}
+                                {{#HasMobilePhoneNumberActivated}}
+                                <span>{{MobilePhoneNumber}}</span>
+                                {{/HasMobilePhoneNumberActivated}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{#HasPartners}}
+            <div class="partners">
+                {{#Partners}}
+                <a href="{{UrlPartner}}" target="_blank"><img src="{{#PhotoPartner}}{{UrlMedias}}/300x200/{{IdMedia}}/{{FileNamePhoto}}{{/PhotoPartner}}" alt="{{TitlePartner}}"></a>
+                {{/Partners}}
+            </div>
+            {{/HasPartners}}
+
+            {{#HasAlcoolWarning}}
+            <div class="alcool-warning">
+                <span>{{ResourcesTemplate.AlcoolWarning}}</span>
+            </div>
+            {{/HasAlcoolWarning}}
+
+            <div class="content-section-footer">
+                <div class="social-medias-legal-cgv-and-copy">
+                    {{#HasSocialNetworks}}
+                    <div class="social-medias-footer">
+                        {{#TikTok}}<a href="{{TikTok}}" target="_blank"><i class="fab fa-tiktok"></i></a>{{/TikTok}}
+                        {{#Facebook}}<a href="{{Facebook}}" target="_blank"><i class="lab la-facebook-f"></i></a>{{/Facebook}}
+                        {{#Twitter}}<a href="{{Twitter}}" target="_blank"><i class="lab la-twitter"></i></a>{{/Twitter}}
+                        {{#Pinterest}}<a href="{{Pinterest}}" target="_blank"><i class="lab la-pinterest"></i></a>{{/Pinterest}}
+                        {{#Youtube}}<a href="{{Youtube}}" target="_blank"><i class="lab la-youtube"></i></a>{{/Youtube}}
+                        {{#Instagram}}<a href="{{Instagram}}" target="_blank"><i class="lab la-instagram"></i></a>{{/Instagram}}
+                        {{#Vimeo}}<a href="{{Vimeo}}" target="_blank"><i class="lab la-vimeo"></i></a>{{/Vimeo}}
+                        {{#Linkedin}}<a href="{{Linkedin}}" target="_blank"><i class="lab la-linkedin-in"></i></a>{{/Linkedin}}
+                    </div>
+                    {{/HasSocialNetworks}}
+
+                    <div class="legal-cgv-and-copy">
+                        <div class="legal-notice-cgv">
+                            <a href="{{UrlLegalNotice}}">{{ResourcesTemplate.pageMenuTitle_legal-notice}}</a>
+                            <a href="{{UrlTermsOfSales}}">{{ResourcesTemplate.pageMenuTitle_terms-of-sales}}</a>
+                        </div>
+
+                        <p class="copyright">
+                            {{ResourcesTemplate.Copyright}} {{CustomTitle}}<sup class="rating-stars">{{{Rating}}}</sup>
+                            <span class="trait-vertical">|</span>
+                            {{ResourcesTemplate.PoweredBy}} <a href="http://www.elloha.com/fr/" target="_blank"><img src="https://static.elloha.com/webgen/img/elloha.png" alt="logo-elloha"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="scroll-holder text-center">
+            <a href="javascript:" id="scroll-to-top"><i class="las la-arrow-down"></i></a>
+        </div>
+    </footer>
+
+    {{>CommonScripts}}
+    
+</body>
+</html>

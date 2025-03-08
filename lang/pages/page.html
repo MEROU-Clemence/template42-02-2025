@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="{{CurrentLang.IsoLang}}" culture="{{CurrentLang.CultureLang}}">
+<head>
+    <title>{{CurrentPage.TitlePage}} - {{CustomTitle}} - {{City}} - {{Country}}</title>
+    <meta name="description" content="{{CurrentPage.TextPageWithoutHtmlLength150}}">
+    {{>CommonMetaTags}}
+    <link rel="canonical" href="{{UrlPageTemplate}}" />
+    <meta property="og:url" content="{{UrlPageTemplate}}" />
+    <meta property="og:title" content="{{CurrentPage.TitlePage}}" />
+    <meta property="og:image" content="{{#CurrentPage.PhotosPage.0}}{{UrlMedias}}/crop-300x200/{{IdMedia}}/{{FileNamePhoto}}{{/CurrentPage.PhotosPage.0}}{{^CurrentPage.PhotosPage.0}}{{#Photos.0}}{{UrlMedias}}/crop-300x200/{{IdMedia}}/{{FileNamePhoto}}{{/Photos.0}}{{/CurrentPage.PhotosPage.0}}" />
+    <meta property="og:description" content="{{CurrentPage.TextPageLength150}}" />
+    {{>FaviconTags}}
+    {{>CommonStylesheets}}
+</head>
+<body>
+    {{{ScriptAnalytics}}}
+    {{{GoogleTagManagerBody}}}
+    {{>Header}}
+
+    <main>
+        <!-- SECTION BANNER -->
+        <section class="section-title-BG bg-img" style="background-image: url({{#CurrentPage.PhotosPage.0}}{{UrlMedias}}/crop-1600x400/{{IdMedia}}/{{FileNamePhoto}}{{/CurrentPage.PhotosPage.0}}{{^CurrentPage.PhotosPage.0}}{{#Photos.0}}{{UrlMedias}}/crop-1600x400/{{IdMedia}}/{{FileNamePhoto}}{{/Photos.0}}{{/CurrentPage.PhotosPage.0}})" alt="{{NamePhoto}}-discover-bg">
+            <div class="opacity-3">
+
+                <div class="big-title-contain big-title-contain-2 content-section">
+                    <h1 class="big-title">{{CurrentPage.TitlePage}}</h1>
+
+                    <!-- SECTION OTHERS PAGES -->
+                    <div class="others-pages owl-carousel owl-theme slider-other-pages">
+                        {{#Pages}}
+                        <a href="{{UrlPageTemplate}}">{{TitlePage}}</a>
+                        {{/Pages}}
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION PAGES -->
+        <section class="section section-news">
+            <div class="content-section">
+
+                <div class="section-page">
+                    {{#CurrentPage.PhotosPage.1}}
+                    <div class="owl-wrapper">
+                        <div class="owl-carousel owl-theme slider-page-page">
+                            {{#CurrentPage.PhotosPage}}
+                            <div class="photo-page">
+                                <img src="{{UrlMedias}}/crop-1300x700/{{IdMedia}}/{{FileNamePhoto}}" alt="{{NamePhoto}}">
+                            </div>
+                            {{/CurrentPage.PhotosPage}}
+                        </div>
+                    </div>
+                    {{/CurrentPage.PhotosPage.1}}
+                    {{^CurrentPage.PhotosPage.1}}
+                    {{#CurrentPage.PhotosPage}}
+                    <div class="photo-page">
+                        <img src="{{UrlMedias}}/crop-1300x700/{{IdMedia}}/{{FileNamePhoto}}" alt="{{NamePhoto}}">
+                    </div>
+                    {{/CurrentPage.PhotosPage}}
+                    {{/CurrentPage.PhotosPage.1}}
+
+                    <div class="infos-page">
+                        <h2>{{CurrentPage.TitlePage}}</h2>
+
+                        <div class="description-page">{{{CurrentPage.TextPage}}}</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    {{>Footer}}
+    {{>CommonScripts}}
+    
+</body>
+</html>

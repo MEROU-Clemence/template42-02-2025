@@ -1,0 +1,446 @@
+{{< CommonMetaTags}}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta id="Meta-lang" http-equiv="content-language" content="{{CurrentLang.IsoLang}}" data-date-format="{{JsDateFormatForBe}}">
+{{{PixelFacebook}}}
+{{{GoogleTagManagerHead}}}
+{{/CommonMetaTags}}
+
+{{< FaviconTags}}
+<link rel="shortcut icon" type="image/x-icon" href="{{Url}}/{{FaviconName}}" />
+{{/FaviconTags}}
+
+{{< CommonStylesheets}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{{TitlePoliceImportUrl}}" rel="stylesheet">
+<link href="{{TextPoliceImportUrl}}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/line-awesome/line-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/fa-brands.min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/bootstrap/bootstrap-min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/owl.carousel.2.3.4.min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/owl.theme.default.2.3.4.min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="{{Url}}/css/common.min.css?v={{TemplateName}}_{{CacheVar}}">
+<link rel="stylesheet" type="text/css" href="{{Url}}/css/elloha-template-42.min.css?v={{TemplateName}}_{{CacheVar}}">
+<link rel="stylesheet" type="text/css" href="{{Url}}/css/custom.css?v={{TemplateName}}_{{CacheVar}}">
+{{/CommonStylesheets}}
+
+{{< CommonScripts}}
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/jquery-2.2.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/plugins.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/bootstrap/bootstrap-min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/owl.carousel.2.3.4.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/mandrill/mandrill.min.js"></script>
+<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.core.js" crossorigin async data-callback="initMapKit" data-libraries="map" data-initial-token="{{TokenMapKit}}"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/skycons.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/lightgallery-all.min.js"></script>
+<script type="text/javascript" src="{{Url}}/js/config.js?v={{Template}}_{{CacheVar}}"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/jquery.fittext.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/jquery.ebcaptcha.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/masonry.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script type="text/javascript" src="{{Url}}/js/common.min.js"></script>
+<script type="text/javascript" src="{{Url}}/js/elloha-template-42.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/newcookieconsent.min.js"></script>
+<script src="https://js.hcaptcha.com/1/api.js"></script>
+{{/CommonScripts}}
+
+{{< ScriptCalendarClick}}
+<script>
+    var onAvailableDateSelect = function () {
+        var dpWidget = window.widgetDatePicker["ConstellationWidgetContainerBE"];
+
+        if (dpWidget === null || dpWidget === undefined) {
+            return;
+        }
+
+        dpWidget.setDate(this.getMoment()._d);
+        $('#ConstellationWidgetContainerBE #BtnLaunchBooking').trigger('click');
+    };
+</script>
+{{/ScriptCalendarClick}}
+
+{{< Header}}
+<header class="first-nav">
+    <div class="content-header">
+
+        <div class="logo-and-menu-desktop">
+            {{#HasPages}}
+            <div class="dropdown menu-header-li">
+                <a class="principal-item-menu" data-toggle="dropdown" href="#">{{ResourcesTemplate.discover}}</a>
+                <ul class="dropdown-menu sub-menu">
+                    {{#Pages}}
+                    <li><a href="{{UrlPageTemplate}}">{{TitlePage}}</a></li>
+                    {{/Pages}}
+                </ul>
+            </div>
+            {{/HasPages}}
+
+            {{#HasGroupesPrestations}}
+            <div class="dropdown menu-header-li">
+                <a class="principal-item-menu" data-toggle="dropdown" href="#">{{^isActivity}}{{ResourcesTemplate.Offers_MenuTitle}}{{/isActivity}}{{#isActivity}}{{ResourcesTemplate.Offers_MenuTitle_5}}{{/isActivity}}</a>
+                <ul class="dropdown-menu sub-menu">
+                    {{#ViewAllOffers}}
+                    <li><a href="{{UrlOffers}}">{{^isActivity}}{{ResourcesTemplate.Offers_ViewAll}}{{/isActivity}}{{#isActivity}}{{ResourcesTemplate.SeeAllOurActivities}}{{/isActivity}}</a> </li>
+                    {{/ViewAllOffers}}
+                    {{#GroupesPrestations}}
+                    <li><a href="{{UrlGroupe}}">{{TitreGroupe}}</a></li>
+                    {{/GroupesPrestations}}
+                </ul>
+            </div>
+            {{/HasGroupesPrestations}}
+            {{^IsRestaurant}}
+            {{^HasGroupesPrestations}}
+            {{#HasPrestas}}
+            {{#Prestations.1}}
+            <div class="dropdown menu-header-li">
+                <a class="principal-item-menu" data-toggle="dropdown" href="#">{{^isActivity}}{{ResourcesTemplate.Offers_MenuTitle}}{{/isActivity}}{{#isActivity}}{{ResourcesTemplate.Offers_MenuTitle_5}}{{/isActivity}}</a>
+                <ul class="dropdown-menu sub-menu">
+                    {{#ViewAllOffers}}
+                    <li><a href="{{UrlOffers}}">{{^isActivity}}{{ResourcesTemplate.Offers_ViewAll}}{{/isActivity}}{{#isActivity}}{{ResourcesTemplate.SeeAllOurActivities}}{{/isActivity}}</a> </li>
+                    {{/ViewAllOffers}}
+                    {{#Prestations}}
+                    <li><a href="{{UrlPrestaTemplate}}">{{TitrePresta}}</a></li>
+                    {{/Prestations}}
+                </ul>
+            </div>
+            {{/Prestations.1}}
+            {{^Prestations.1}}
+            <div class="menu-header-li">
+                <a class="principal-item-menu" href="{{Prestations.0.UrlPrestaTemplate}}">{{^isActivity}}{{ResourcesTemplate.Offers_MenuTitle}}{{/isActivity}}{{#isActivity}}{{ResourcesTemplate.Offers_MenuTitle_5}}{{/isActivity}}</a>
+            </div>
+            {{/Prestations.1}}
+            {{/HasPrestas}}
+            {{/HasGroupesPrestations}}
+            {{/IsRestaurant}}
+            {{#IsRestaurant}}
+            {{#HasPrestas}}
+            {{#Prestations.0}}
+            <div class="menu-header-li">
+                <a class="principal-item-menu" href="{{UrlPrestaTemplate}}">{{ResourcesTemplate.CarteMenus}}</a>
+            </div>
+            {{/Prestations.0}}
+            {{/HasPrestas}}
+            {{/IsRestaurant}}
+
+            {{#HasSpecialOffers}}
+            <div class="menu-header-li">
+                <a class="principal-item-menu" href="{{UrlSpecialOffers}}">{{ResourcesTemplate.pageMenuTitle_special-offers}}</a>
+            </div>
+            {{/HasSpecialOffers}}
+
+            <div class="logo logo-w">
+                <a class="logo-top {{^HasLogo}}logo-text{{/HasLogo}}" href="{{UrlRoot}}">
+                    {{#HasLogo}}<img class="logo-header" src="{{LogoUrl}}" alt="{{CustomTitle}}">{{/HasLogo}}
+                    {{^HasLogo}}<span class="title">{{CustomTitle}}<sup class="rating-stars">{{{Rating}}}</sup></span>{{/HasLogo}}
+                </a>
+            </div>
+
+            {{#HasBookingActivated}}
+            {{#HasGiftsActivated}}
+            <div class="menu-header-li">
+                <a class="principal-item-menu" href="{{UrlGifts}}">{{ResourcesTemplate.GiftsTitle}}</a>
+            </div>
+            {{/HasGiftsActivated}}
+            {{/HasBookingActivated}}
+
+            {{#HasNews}}
+            <div class="menu-header-li">
+                <a class="principal-item-menu" href="{{UrlNews}}">{{ResourcesTemplate.pageMenuTitle_news}}</a>
+            </div>
+            {{/HasNews}}
+
+            {{#HasRecommandations}}
+            <div class="menu-header-li">
+                <a class="principal-item-menu" href="{{UrlAround}}">{{ResourcesTemplate.pageMenuTitle_around}}</a>
+            </div>
+            {{/HasRecommandations}}
+
+        </div>
+
+        <div class="resa-lang-and-menu">
+            <div class="resa-and-lang">
+                <a href="{{UrlContact}}" class="contact-menu-desktop"><i class="las la-envelope"></i></a>
+
+                {{#HasBookingActivated}}
+                <a class="resa-picto" href="{{UrlOnlineBooking}}"><i class="las la-calendar-check"></i></a>
+                {{/HasBookingActivated}}
+
+                {{#HasOtherLangs}}
+                <div class="dropdown languages">
+                    <div class="dropdown-div" data-toggle="dropdown">
+                        <i class="fa fa-globe"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        {{#Langs}}
+                        <li><a href="{{UrlLang}}" lang="{{IsoLang}}"><div class="flag">{{IsoLang}}</div></a></li>
+                        {{/Langs}}
+                    </ul>
+                </div>
+                {{/HasOtherLangs}}
+            </div>
+
+            <div class="navbar-toggler">
+                <div class="btn-menu">{{ResourcesTemplate.Menu}}</div>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<!-- NAV MOBILE -->
+<nav class="mobile-nav">
+    <ul class="menu menu-mobile">
+        {{#HasPages}}
+        <li class="clic-sub-menu">
+            <a href="#">{{ResourcesTemplate.discover}}</a>
+            <ul class="sub-menu">
+                {{#Pages}}
+                <li><a href="{{UrlPageTemplate}}">{{TitlePage}}</a></li>
+                {{/Pages}}
+            </ul>
+        </li>
+        {{/HasPages}}
+        {{#HasGroupesPrestations}}
+        <li class="clic-sub-menu">
+            <a href="#">{{^isActivity}}{{ResourcesTemplate.Offers_MenuTitle}}{{/isActivity}}{{#isActivity}}{{ResourcesTemplate.Offers_MenuTitle_5}}{{/isActivity}}</a>
+            <ul class="sub-menu">
+                {{#ViewAllOffers}}
+                <li><a href="{{UrlOffers}}">{{^isActivity}}{{ResourcesTemplate.Offers_ViewAll}}{{/isActivity}}{{#isActivity}}{{ResourcesTemplate.SeeAllOurActivities}}{{/isActivity}}</a> </li>
+                {{/ViewAllOffers}}
+                {{#GroupesPrestations}}
+                <li><a href="{{UrlGroupe}}">{{TitreGroupe}}</a></li>
+                {{/GroupesPrestations}}
+            </ul>
+        </li>
+        {{/HasGroupesPrestations}}
+        {{^IsRestaurant}}
+        {{^HasGroupesPrestations}}
+        {{#HasPrestas}}
+        {{#Prestations.1}}
+        <li class="clic-sub-menu">
+            <a href="#">{{^isActivity}}{{ResourcesTemplate.Offers_MenuTitle}}{{/isActivity}}{{#isActivity}}{{ResourcesTemplate.Offers_MenuTitle_5}}{{/isActivity}}</a>
+            <ul class="sub-menu">
+                {{#ViewAllOffers}}
+                <li><a href="{{UrlOffers}}">{{^isActivity}}{{ResourcesTemplate.Offers_ViewAll}}{{/isActivity}}{{#isActivity}}{{ResourcesTemplate.SeeAllOurActivities}}{{/isActivity}}</a> </li>
+                {{/ViewAllOffers}}
+                {{#Prestations}}
+                <li><a href="{{UrlPrestaTemplate}}">{{TitrePresta}}</a></li>
+                {{/Prestations}}
+            </ul>
+        </li>
+        {{/Prestations.1}}
+        {{^Prestations.1}}
+        <li>
+            <a href="{{Prestations.0.UrlPrestaTemplate}}">{{^isActivity}}{{ResourcesTemplate.Offers_MenuTitle}}{{/isActivity}}{{#isActivity}}{{ResourcesTemplate.Offers_MenuTitle_5}}{{/isActivity}}</a>
+        </li>
+        {{/Prestations.1}}
+        {{/HasPrestas}}
+        {{/HasGroupesPrestations}}
+        {{/IsRestaurant}}
+        {{#IsRestaurant}}
+        {{#HasPrestas}}
+        {{#Prestations.0}}
+        <li>
+            <a href="{{UrlPrestaTemplate}}">{{ResourcesTemplate.CarteMenus}}</a>
+        </li>
+        {{/Prestations.0}}
+        {{/HasPrestas}}
+        {{/IsRestaurant}}
+        {{#HasSpecialOffers}}
+        <li>
+            <a href="{{UrlSpecialOffers}}">{{ResourcesTemplate.pageMenuTitle_special-offers}}</a>
+        </li>
+        {{/HasSpecialOffers}}
+        {{#HasBookingActivated}}
+        {{#HasGiftsActivated}}
+        <li>
+            <a href="{{UrlGifts}}">{{ResourcesTemplate.GiftsTitle}}</a>
+        </li>
+        {{/HasGiftsActivated}}
+        {{/HasBookingActivated}}
+        {{#HasNews}}
+        <li>
+            <a href="{{UrlNews}}">{{ResourcesTemplate.pageMenuTitle_news}}</a>
+        </li>
+        {{/HasNews}}
+        {{#HasRecommandations}}
+        <li>
+            <a href="{{UrlAround}}">{{ResourcesTemplate.pageMenuTitle_around}}</a>
+        </li>
+        {{/HasRecommandations}}
+        {{#FeaturedPage}}
+        <li>
+            <a href="{{UrlPageTemplate}}">{{TitlePage}}</a>
+        </li>
+        {{/FeaturedPage}}
+        <li>
+            <a href="{{UrlContact}}">{{ResourcesTemplate.Contact}}</a>
+        </li>
+    </ul>
+</nav>
+{{/Header}}
+
+{{< Calendar}}
+<section class="section section-with-background section-big">
+    <svg class="background-svg" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" id="Calque_1" data-name="Calque 1" viewBox="0 0 1193.28 842.4">
+        <path d="M.96,0v80.6c49.98-5.22,103.89-24.48,143.79-55.27,8.86-6.84,19.67-15.54,25.04-25.33h18.23c-.45,2.49-2.22,4.42-3.82,6.26C140.76,56.16,74.4,86.72,9.11,94.02c-2.79.31-6.21-1.04-8.15,1.44v126.17c48.31-6.03,97.25-20.32,140.07-43.63C213.73,138.4,258.47,68.28,301.2,0h23.02c-18.42,33.31-37.82,66.43-61.43,96.38C198.7,177.68,104.76,232.02.96,242.74v148.72c78.41-12.02,157.3-38.79,221.48-85.97,81.47-59.91,131.93-154.4,184.84-238.24,14.93-23.65,30.93-45.42,48.36-67.24h31.65c-63.66,74.81-101.23,167.85-164.05,243.2C242.8,339.68,127.51,402.21,2.58,418.5l-1.62,1.26v158.31c0,.41,1.5,1.61,2.3,1.39,143.48-16.85,284.32-68.73,381.88-178.4,86.57-97.31,131.83-218.63,209.2-321.33,20.47-27.17,42.78-52.93,63.69-79.73h34.53l-70.4,92.21c-58.6,76.25-92.09,167.97-146.56,246.78-48.94,70.8-115.4,136.33-188.87,181.43-85.76,52.65-185.14,83.16-285.77,89.79v179.42c67.01-10.96,132.77-30.11,194.41-58.36,184.29-84.46,322.98-255.32,413.28-432.86,42.45-83.47,76.76-171.45,125.34-251.69,9.56-15.78,20.72-30.56,29.55-46.72h42.21c-8.89,14.43-19.11,28.01-28.22,42.3-84.74,132.95-138.91,279.67-235.19,406.63-33.38,44.01-69.13,91.06-105.4,132.52-111.67,127.63-265.65,213.51-434.34,238.14l-1.64,1.23v20.63h292.09c195.3-109.42,272.97-336.18,407.22-503.21,24.88-30.96,54.01-57.88,81.04-86.84,15.89-17.03,30.51-35.39,46.48-52.33,67.4-71.45,151.95-135.4,241.1-177.16,16.36-7.66,33.48-13.68,49.57-21.9h74.82v842.4H0V0h.96ZM1192.32,9.59c-225.94,57.48-403.8,231.7-526.06,423.2-83.39,130.63-146.32,282.21-272.68,378.73l-44.43,29.92h116.55c176.23-88.24,229.21-293.74,348.18-436.57,22.15-26.59,46.56-54.17,70.03-79.63,82.88-89.91,186.54-161.03,308.41-185.16V9.59ZM1192.32,164.07c-191.3,40.28-335.56,188.4-430.86,351.47-61.38,105.02-106.54,223.2-208.64,296.94-14.13,10.2-29.3,18.85-43.47,28.96h250.36c50.39-74.38,93.52-153.7,153.94-220.69,33.27-36.88,68.31-74.18,108.58-103.43,50.29-36.53,108.5-63.38,170.09-74.05V164.07ZM1192.32,461.5c-118.19,20.1-216.87,99.15-288.69,191.45-45.76,58.81-78.23,126.36-118.98,188.49h194.72c18.81-33.13,42.43-63.6,67.61-92.12,26.59-30.12,55.65-60.08,89.01-82.71,17.77-12.06,36.86-21.93,56.33-30.97v-174.14ZM1192.32,795.39v-144.88c-85.4,37.11-152.47,110.96-197.6,190.93h133.33c6.27-10.46,16.86-19.38,26.54-26.7,11.13-8.42,23.65-17.22,37.73-19.35ZM1192.32,801.14c-16.28,3.13-31.98,14.35-44.14,25.41-4.7,4.28-10.15,9.54-13.42,14.88h57.55v-40.3Z" fill="var(--color-bg-1)" />
+        <path d="M1118.46,0c-16.09,8.22-33.21,14.24-49.57,21.9-89.15,41.77-173.71,105.72-241.1,177.16-15.98,16.94-30.59,35.3-46.48,52.33-27.03,28.96-56.16,55.89-81.04,86.84-134.25,167.02-211.92,393.79-407.22,503.21H.96v-20.63l1.64-1.23c168.69-24.63,322.67-110.51,434.34-238.14,36.27-41.46,72.02-88.51,105.4-132.52,96.29-126.96,150.45-273.68,235.19-406.63,9.11-14.29,19.33-27.87,28.22-42.3h312.71Z" fill="var(--color-bg-2)" />
+        <path d="M763.55,0c-8.83,16.15-20,30.93-29.55,46.72-48.59,80.25-82.89,168.22-125.34,251.69-90.29,177.54-228.99,348.4-413.28,432.86-61.65,28.25-127.4,47.4-194.41,58.36v-179.42c100.63-6.63,200.01-37.14,285.77-89.79,73.47-45.1,139.93-110.63,188.87-181.43,54.47-78.81,87.97-170.53,146.56-246.78L692.56,0h70.98Z" fill="var(--color-bg-2)" />
+        <path d="M658.03,0c-20.91,26.81-43.22,52.56-63.69,79.73-77.36,102.7-122.63,224.02-209.2,321.33-97.57,109.67-238.41,161.55-381.88,178.4-.8.22-2.3-.98-2.3-1.39v-158.31l1.62-1.26c124.93-16.29,240.22-78.83,320.66-175.3C386.06,167.85,423.63,74.81,487.29,0h170.74Z" fill="var(--color-bg-2)" />
+        <path d="M455.63,0c-17.43,21.82-33.44,43.59-48.36,67.24-52.9,83.84-103.36,178.33-184.84,238.24C158.26,352.67,79.37,379.43.96,391.46v-148.72c103.8-10.72,197.74-65.06,261.83-146.36,23.62-29.96,43.01-63.07,61.43-96.38h131.41Z" fill="var(--color-bg-2)" />
+        <path d="M301.2,0c-42.73,68.28-87.46,138.4-160.17,178C98.21,201.32,49.27,215.6.96,221.63v-126.17c1.94-2.48,5.36-1.13,8.15-1.44,65.3-7.31,131.65-37.86,175.09-87.76,1.6-1.84,3.36-3.77,3.82-6.26h113.19Z" fill="var(--color-bg-2)" />
+        <path d="M169.78,0c-5.37,9.79-16.18,18.48-25.04,25.33C104.85,56.12,50.94,75.38.96,80.6V0h168.83Z" fill="var(--color-bg-2)" />
+        <path d="M1192.32,164.07v279.2c-61.59,10.67-119.8,37.53-170.09,74.05-40.28,29.25-75.31,66.55-108.58,103.43-60.43,66.99-103.56,146.3-153.94,220.69h-250.36c14.17-10.11,29.34-18.76,43.47-28.96,102.11-73.73,147.27-191.92,208.64-296.94,95.3-163.07,239.56-311.2,430.86-351.47Z" fill="var(--color-bg-2)" />
+        <path d="M1192.32,9.59v130.49c-121.86,24.13-225.52,95.26-308.41,185.16-23.47,25.46-47.88,53.04-70.03,79.63-118.98,142.83-171.95,348.33-348.18,436.57h-116.55l44.43-29.92c126.36-96.52,189.28-248.1,272.68-378.73C788.52,241.3,966.38,67.08,1192.32,9.59Z" fill="var(--color-bg-2)" />
+        <path d="M1192.32,461.5v174.14c-19.47,9.04-38.55,18.91-56.33,30.97-33.36,22.64-62.42,52.59-89.01,82.71-25.18,28.52-48.8,58.99-67.61,92.12h-194.72c40.76-62.13,73.23-129.68,118.98-188.49,71.81-92.3,170.5-171.35,288.69-191.45Z" fill="var(--color-bg-2)" />
+        <path d="M1192.32,795.39c-14.07,2.13-26.6,10.93-37.73,19.35-9.68,7.33-20.27,16.25-26.54,26.7h-133.33c45.13-79.97,112.2-153.82,197.6-190.93v144.88Z" fill="var(--color-bg-2)" />
+        <path d="M1192.32,801.14v40.3h-57.55c3.26-5.35,8.72-10.61,13.42-14.88,12.16-11.07,27.86-22.28,44.14-25.41Z" fill="var(--color-bg-2)" />
+    </svg>
+
+    <div class="content-section">
+
+        <div class="calendars">
+            <div class="avail-calendar-w">
+                <div class="calendar-container">
+                    <div id="datepicker2"></div>
+                </div>
+            </div>
+            <div class="calendar_status">
+                <div>
+                    <div class="green-dispo">-</div>
+                    <span>{{ResourcesTemplate.Available}}</span>
+                </div>
+                <div>
+                    <div class="red-no-dispo">-</div>
+                    <span class="not-available">{{ResourcesTemplate.NotAvailable}}</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{{/Calendar}}
+
+{{< Footer}}
+<footer class="section-footer">
+    <div class="content-footer">
+
+        <div class="content-section-footer">
+            <div class="newsletter-maps-address">
+                <!-- SECTION NEWSLETTER -->
+                {{#HasNewsletterActivated}}
+                <div class="section-newsletter">
+                    <h3>{{ResourcesTemplate.SubscribeToTheNewsletter}}</h3>
+
+                    <form id="Nl-form-footer" action="" method="GET" class="form-inline form-newsletter">
+                        <input id="Nl-footer-email" name="Nl-footer-email" type="email" placeholder="{{ResourcesTemplate.YourEmailAddress}}" class="form-control" data-error="{{ResourcesTemplate.EmailError}}" required>
+
+                        <button id="Nl-footer-submit" class="pull-right" type="button">{{ResourcesTemplate.Ok}}</button>
+
+                        <div class="hp">
+                            <label>Si vous �tes un humain, laissez ce champ vide</label>
+                            <input type="text" name="comment" id="Hp-footer">
+                        </div>
+                        <p id="Nl-footer-result" class="form-result hidden"></p>
+                        <div id="blockCaptcha" class="d-none hcaptcha"> </div>
+                    </form>
+                </div>
+                {{/HasNewsletterActivated}}
+
+                <div class="map-and-address-footer">
+                    <!-- SECTION MAP -->
+                    <div class="section-map">
+                        <div id="applemapkit" class="fullwidth-mapkit">
+                            <div id="mapApple"></div>
+                        </div>
+
+                        <div data-action="external-map" class="external-map btn-map"><i class="las la-map-marked-alt"></i></div>
+                    </div>
+
+                    <div class="address-footer-contain">
+                        <div class="address-footer">
+                            <span class="address-line-footer">{{AddressLine}},</span>
+                            <span>{{PostalCode}}, {{City}}, {{Country}}</span>
+                            {{#HasPhoneNumberActivated}}
+                            <span>{{PhoneNumber}}</span>
+                            {{/HasPhoneNumberActivated}}
+                            {{#HasMobilePhoneNumberActivated}}
+                            <span>{{MobilePhoneNumber}}</span>
+                            {{/HasMobilePhoneNumberActivated}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{#HasPartners}}
+        <div class="partners">
+            {{#Partners}}
+            <a href="{{UrlPartner}}" target="_blank"><img src="{{#PhotoPartner}}{{UrlMedias}}/300x200/{{IdMedia}}/{{FileNamePhoto}}{{/PhotoPartner}}" alt="{{TitlePartner}}"></a>
+            {{/Partners}}
+        </div>
+        {{/HasPartners}}
+
+        {{#HasAlcoolWarning}}
+        <div class="alcool-warning">
+            <span>{{ResourcesTemplate.AlcoolWarning}}</span>
+        </div>
+        {{/HasAlcoolWarning}}
+
+        <div class="content-section-footer">
+            <div class="social-medias-legal-cgv-and-copy">
+                {{#HasSocialNetworks}}
+                <div class="social-medias-footer">
+                    {{#TikTok}}<a href="{{TikTok}}" target="_blank"><i class="fab fa-tiktok"></i></a>{{/TikTok}}
+                    {{#Facebook}}<a href="{{Facebook}}" target="_blank"><i class="lab la-facebook-f"></i></a>{{/Facebook}}
+                    {{#Twitter}}<a href="{{Twitter}}" target="_blank"><i class="lab la-twitter"></i></a>{{/Twitter}}
+                    {{#Pinterest}}<a href="{{Pinterest}}" target="_blank"><i class="lab la-pinterest"></i></a>{{/Pinterest}}
+                    {{#Youtube}}<a href="{{Youtube}}" target="_blank"><i class="lab la-youtube"></i></a>{{/Youtube}}
+                    {{#Instagram}}<a href="{{Instagram}}" target="_blank"><i class="lab la-instagram"></i></a>{{/Instagram}}
+                    {{#Vimeo}}<a href="{{Vimeo}}" target="_blank"><i class="lab la-vimeo"></i></a>{{/Vimeo}}
+                    {{#Linkedin}}<a href="{{Linkedin}}" target="_blank"><i class="lab la-linkedin-in"></i></a>{{/Linkedin}}
+                </div>
+                {{/HasSocialNetworks}}
+
+                <div class="legal-cgv-and-copy">
+                    <div class="legal-notice-cgv">
+                        <a href="{{UrlLegalNotice}}">{{ResourcesTemplate.pageMenuTitle_legal-notice}}</a>
+                        <a href="{{UrlTermsOfSales}}">{{ResourcesTemplate.pageMenuTitle_terms-of-sales}}</a>
+                    </div>
+
+                    <p class="copyright">
+                        {{ResourcesTemplate.Copyright}} {{CustomTitle}}<sup class="rating-stars">{{{Rating}}}</sup>
+                        <span class="trait-vertical">|</span>
+                        {{ResourcesTemplate.PoweredBy}} <a href="http://www.elloha.com/fr/" target="_blank"><img src="https://static.elloha.com/webgen/img/elloha.png" alt="logo-elloha"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="scroll-holder text-center">
+        <a href="javascript:" id="scroll-to-top"><i class="las la-arrow-down"></i></a>
+    </div>
+</footer>
+{{/Footer}}

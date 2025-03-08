@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="{{CurrentLang.IsoLang}}" culture="{{CurrentLang.CultureLang}}">
+<head>
+    <title>{{ResourcesTemplate.NewsPageTitle}} - {{CustomTitle}} - {{City}} - {{Country}}</title>
+    <meta name="description" content="{{MetaDescriptionNews}}">
+    {{>CommonMetaTags}}
+    <link rel="canonical" href="{{UrlNews}}" />
+    <meta property="og:url" content="{{UrlNews}}" />
+    <meta property="og:title" content="{{ResourcesTemplate.NewsPageTitle}}" />
+    <meta property="og:image" content="{{#Photos.0}}{{UrlMedias}}/crop-300x200/{{IdMedia}}/{{FileNamePhoto}}{{/Photos.0}}" />
+    <meta property="og:description" content="{{MetaDescriptionNews}}" />
+    {{>FaviconTags}}
+    {{>CommonStylesheets}}
+</head>
+<body>
+    {{{ScriptAnalytics}}}
+    {{{GoogleTagManagerBody}}}
+    {{>Header}}
+
+    <main>
+        <!-- SECTION BANNER -->
+        <section class="section-title-BG bg-img" style="background-image: url(https://static.elloha.com/webgen/img/news.jpg)" alt="{{NamePhoto}}-news-bg">
+            <div class="opacity-3">
+
+                <div class="big-title-contain big-title-contain-2 content-section">
+                    <h1 class="big-title">{{ResourcesTemplate.TheNews}}</h1>
+
+                    <!-- SECTION OTHERS PAGES -->
+                    <div class="others-pages owl-carousel owl-theme slider-other-pages">
+                        {{#NewsList}}
+                        <a href="#{{IdNews}}">{{TitleNews}}</a>
+                        {{/NewsList}}
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION NEWS -->
+        <section class="section section-news section-news-in-news">
+            <div class="content-section">
+
+                {{#NewsList}}
+                <div class="contain-news-in-news" id="{{IdNews}}" data-pagination-item>
+                    <span class="date-news-in-news">{{DateNewsString}}</span>
+
+                    <div class="img-and-descrip-news-in-news">
+                        {{#UrlYoutube}}
+                        <div class="option-youtube"><iframe src="{{UrlYoutube}}" frameborder="0" allowfullscreen></iframe></div>
+                        {{/UrlYoutube}}
+
+                        {{^UrlYoutube}}
+                        {{#ListPhotoNews.0}}
+                        {{#ListPhotoNews.1}}
+                        <div class="owl-wrapper page-in-news-slider-contain">
+                            <div class="owl-carousel owl-theme slider-page-page">
+                                {{#ListPhotoNews}}
+                                <div class="photo-page-in-news">
+                                    <img src="{{UrlMedias}}/crop-750x560/{{IdMedia}}/{{FileNamePhoto}}" alt="{{NamePhoto}}">
+                                </div>
+                                {{/ListPhotoNews}}
+                            </div>
+                        </div>
+                        {{/ListPhotoNews.1}}
+                        {{^ListPhotoNews.1}}
+                        {{#ListPhotoNews}}
+                        <div class="photo-page-in-news-solo">
+                            <img src="{{UrlMedias}}/crop-750x560/{{IdMedia}}/{{FileNamePhoto}}" alt="{{NamePhoto}}">
+                        </div>
+                        {{/ListPhotoNews}}
+                        {{/ListPhotoNews.1}}
+                        {{/ListPhotoNews.0}}
+
+                        {{^ListPhotoNews.0}}
+                        <div class="photo-page-in-news-solo">
+                            <img src="https://static.elloha.com/webgen/img/news.jpg" alt="{{NamePhoto}}">
+                        </div>
+                        {{/ListPhotoNews.0}}
+                        {{/UrlYoutube}}
+
+                        <div class="title-and-decrip-news-in-news">
+                            <h2>{{TitleNews}}</h2>
+
+                            <div class="description-news-in-news">{{{TextNews}}}</div>
+                        </div>
+                    </div>
+                </div>
+                {{/NewsList}}
+
+            </div>
+        </section>
+    </main>
+
+    {{>Footer}}
+    {{>CommonScripts}}
+    
+</body>
+</html>
