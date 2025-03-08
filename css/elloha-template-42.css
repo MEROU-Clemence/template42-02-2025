@@ -1,3 +1,20 @@
+/*Variables*/
+:root {
+    --color-link: #A78F5B;
+    --color-btn: #41654C;
+    --color-btn-txt: #FFFFFF;
+    --color-text: #1F1F1F;
+    --color-text-white: #FFFFFF;
+    --color-title: #4B3E35;
+    --color-bg-1: #F3F0EC;
+    --color-bg-2: #45594B;
+    --color-bg-3: #EECC83;
+    --color-red: #F9BA32;
+    --font-title: 'Caprasimo';
+    --font-text: 'Albert Sans';
+}
+
+
 /****** FOR ALL ******/
 * {
     box-sizing: border-box;
